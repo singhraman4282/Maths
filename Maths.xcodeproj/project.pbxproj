@@ -10,6 +10,7 @@
 		F1045454207D5A7C00B8C907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1045453207D5A7C00B8C907 /* main.m */; };
 		F104545C207D5C6900B8C907 /* AdditionQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = F104545B207D5C6900B8C907 /* AdditionQuestions.m */; };
 		F104545F207D76F300B8C907 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F104545E207D76F300B8C907 /* InputHandler.m */; };
+		F1045462207D7EDC00B8C907 /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = F1045461207D7EDC00B8C907 /* ScoreKeeper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		F104545B207D5C6900B8C907 /* AdditionQuestions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestions.m; sourceTree = "<group>"; };
 		F104545D207D76F300B8C907 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		F104545E207D76F300B8C907 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		F1045460207D7EDC00B8C907 /* ScoreKeeper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreKeeper.h; sourceTree = "<group>"; };
+		F1045461207D7EDC00B8C907 /* ScoreKeeper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreKeeper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				F1045453207D5A7C00B8C907 /* main.m */,
+				F1045460207D7EDC00B8C907 /* ScoreKeeper.h */,
+				F1045461207D7EDC00B8C907 /* ScoreKeeper.m */,
 				F104545D207D76F300B8C907 /* InputHandler.h */,
 				F104545E207D76F300B8C907 /* InputHandler.m */,
 				F104545A207D5C6900B8C907 /* AdditionQuestions.h */,
@@ -129,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1045462207D7EDC00B8C907 /* ScoreKeeper.m in Sources */,
 				F1045454207D5A7C00B8C907 /* main.m in Sources */,
 				F104545F207D76F300B8C907 /* InputHandler.m in Sources */,
 				F104545C207D5C6900B8C907 /* AdditionQuestions.m in Sources */,

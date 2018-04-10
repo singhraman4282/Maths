@@ -9,10 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "AdditionQuestions.h"
 #import "InputHandler.h"
+#import "ScoreKeeper.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL gameon = YES;
+        ScoreKeeper *newScore = [ScoreKeeper new];
+        
+        
+        
+        
         while(gameon) {
             AdditionQuestions *question1 = [AdditionQuestions new];
             InputHandler*newInput = [InputHandler new];
@@ -28,8 +34,14 @@ int main(int argc, const char * argv[]) {
             }
             else if (userAnswered == [question1 answer]) {
                 NSLog(@"Right");
+                newScore.right += 1;
+                float abc = [newScore percentageThing];
+                NSLog(@"Score: %d right, %d wrong ---- %f\%", [newScore right], [newScore wrong], abc);
             } else {
                 NSLog(@"Wrong! The correct answer is %d", [question1 answer]);
+                newScore.wrong += 1;
+                float abc = [newScore percentageThing];
+                NSLog(@"Score: %d right, %d wrong ---- %f\%", [newScore right], [newScore wrong], abc);
             }
             
             
