@@ -7,20 +7,38 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestions.h"
+#import "Question.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL gameon = YES;
         ScoreKeeper *newScore = [ScoreKeeper new];
         
+        //maths2
         
+        QuestionManager *newQuesMan = [QuestionManager new];
+        QuestionFactory *newFactory = [QuestionFactory new];
+        
+        
+        
+        //maths2
         
         
         while(gameon) {
-            AdditionQuestions *question1 = [AdditionQuestions new];
+            
+            
+            Question *question1 = [newFactory generateRandomQuestion];
+//            Question *question1 = [Question new];
+        //maths2
+            [newQuesMan.questions addObject:question1];
+//            [[newQuesMan.questions objectAtIndex:0] answerTime];
+//            NSLog(@"Total Questions is %lu", (unsigned long)newQuesMan.questions.count);
+            
+        //maths2
             InputHandler*newInput = [InputHandler new];
             NSLog(@"%@", [question1 question]);
            
@@ -36,15 +54,23 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Right");
                 newScore.right += 1;
                 float abc = [newScore percentageThing];
-                NSLog(@"Score: %d right, %d wrong ---- %f\%", [newScore right], [newScore wrong], abc);
+                NSLog(@"Score: %d right, %d wrong ---- %f percent accuracy rate", [newScore right], [newScore wrong], abc);
             } else {
-                NSLog(@"Wrong! The correct answer is %d", [question1 answer]);
+                NSLog(@"Wrong! The correct answer is %ld", (long)[question1 answer]);
                 newScore.wrong += 1;
                 float abc = [newScore percentageThing];
-                NSLog(@"Score: %d right, %d wrong ---- %f\%", [newScore right], [newScore wrong], abc);
+                NSLog(@"Score: %d right, %d wrong ---- %f percent accuracy rate", [newScore right], [newScore wrong], abc);
             }
             
+            //maths2
             
+
+            [question1 answerTime];
+            [newQuesMan timeOutput];
+            
+            
+            
+            //maths2
             
             
             
